@@ -22,10 +22,6 @@ La redirección permite enviar la salida de un comando a un archivo. El operador
 
 La eliminación exige revisar la ruta porque `rm` borra archivos. Para una carpeta vacía se utiliza `rmdir`, que falla si aún contiene elementos. La práctica eliminó solamente la copia creada para el ejercicio y la carpeta que quedó vacía. Finalmente se verificaron la estructura, el número de líneas y la conservación del contenido original.
 
-![Figura 1. Flujo de manipulación de archivos](figuras/flujo.png)
-
-Figura 1. Flujo de copia, cambio de nombre, movimiento y eliminación aplicado durante la práctica.
-
 ## 4. Conocimientos previos
 - Diferencia entre archivo, directorio y ruta.
 - Navegación básica con `pwd`, `cd` y `ls`.
@@ -120,9 +116,9 @@ proyecto_comandos/
 - `imagenes` y `backup_notas.txt`: eliminados según la consigna.
 - `tarea-s1-wilmer_ruilova.txt`: historial real de la sesión de práctica.
 
-<img src="capturas/resultados-ubuntu.png" alt="Figura 2. Resultados reales de la practica en Ubuntu WSL" width="800">
+<img src="capturas/resultados-ubuntu.png" alt="Figura 1. Resultados reales de la practica en Ubuntu WSL" width="800">
 
-Figura 2. Captura tomada por el estudiante en Ubuntu WSL: estructura final, notas de tres líneas, resumen de cuatro líneas y comprobación de eliminación del directorio imagenes. El historial completo de creación, copia, cambio de nombre, movimiento y eliminación está en tarea-s1-wilmer_ruilova.txt.
+Figura 1. Captura tomada por el estudiante en Ubuntu WSL: estructura final, notas de tres líneas, resumen de cuatro líneas y comprobación de eliminación del directorio imagenes. El historial completo de creación, copia, cambio de nombre, movimiento y eliminación está en tarea-s1-wilmer_ruilova.txt.
 
 ## 10. Bibliografía
 Instituto Sudamericano. (2026). *1. Fundamentación teórica* [Material de curso]. EVA. https://eva.sudamericano.edu.ec/mod/page/view.php?id=30431
