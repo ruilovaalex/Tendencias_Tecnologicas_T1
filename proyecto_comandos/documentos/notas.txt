@@ -1,0 +1,3 @@
+Practica de comandos Linux - Semana 1
+Autor: Wilmer Alexander Ruilova Merchan
+Objetivo: crear y manipular archivos desde la terminal.

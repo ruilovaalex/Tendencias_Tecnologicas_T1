@@ -1,0 +1,9 @@
+material-local/
+capturas-locales/
+borrador-foro.txt
+guia-audio.txt
+audio-60-segundos.txt
+*.mp3
+*.m4a
+*.wav
+figuras/captura-documentos.png
