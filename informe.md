@@ -9,7 +9,7 @@ Estado: borrador para revisión del estudiante; práctica ejecutada por el asist
 Creación y manipulación de archivos y directorios desde la terminal de Linux.
 
 ## 2. Tiempo de duración
-La ejecución automatizada de los comandos tomó aproximadamente 6 segundos. El tiempo de estudio, revisión y preparación de la entrega debe completarlo el estudiante; no se ha estimado como si hubiera sido medido.
+La sesión automática de ejecución y verificación duró aproximadamente un segundo. El tiempo de estudio y revisión debe completarlo el estudiante.
 
 ## 3. Fundamentos
 La interfaz de línea de comandos permite comunicarse con el sistema operativo mediante instrucciones escritas. En Linux, una shell interpreta esas instrucciones y ejecuta programas o funciones internas. En esta práctica se utilizó Bash dentro de Ubuntu con WSL 2. Este entorno permite trabajar con herramientas de Linux desde Windows, sin reiniciar el equipo para cambiar de sistema operativo. La fundamentación de la materia relaciona esta habilidad con la administración de servidores y el despliegue de aplicaciones.
@@ -25,15 +25,6 @@ La eliminación exige revisar la ruta porque `rm` borra archivos. Para una carpe
 ![Figura 1. Flujo de manipulación de archivos](figuras/flujo.png)
 
 Figura 1. Flujo de copia, cambio de nombre, movimiento y eliminación aplicado durante la práctica.
-
-### Relación con el PEA
-La unidad 1 del PEA, Contenerización de Aplicaciones, comienza con el contenido 1.1: comandos y directorios de Linux. Propone una infografía de comandos principales y el uso de WSL. Esta práctica desarrolla la base de navegación, gestión de archivos y registro de comandos necesaria para administrar entornos donde después se desplegarán contenedores. No se han realizado ejercicios de Docker en TAS1.
-
-El PEA entregado corresponde al período marzo-agosto de 2026. Las fechas de esta práctica corresponden a octubre de 2026 según EVA. Se usan los objetivos del PEA como referencia curricular y la consigna actual de EVA para los entregables.
-
-![Figura 1b. Infografía de comandos principales](figuras/infografia-comandos.png)
-
-Figura 1b. Comandos de navegación, manipulación, redirección e historial utilizados en TAS1.
 
 ## 4. Conocimientos previos
 - Diferencia entre archivo, directorio y ruta.
@@ -61,7 +52,7 @@ Figura 1b. Comandos de navegación, manipulación, redirección e historial util
 - Plantilla del docente: https://github.com/maguaman2/informe-tendencias
 
 ## 8. Procedimiento
-Los comandos se ejecutaron en una sesión aislada de Bash. El historial anterior del usuario no se leyó ni se sobrescribió. La carpeta de trabajo fue `/mnt/c/Users/USER/Documents/Codex/Projects/tas1-linux-wilmer-20261008`.
+Los comandos se ejecutaron en una sesión aislada de Bash. El historial anterior del usuario no se leyó ni se sobrescribió. La carpeta de trabajo fue `/mnt/c/Users/USER/OneDrive/Desktop/02 - Estudios/Tendencias_Tecnologicas_T1/practica-verificada`.
 
 ### Paso 1. Crear la estructura
 ```bash
@@ -129,9 +120,7 @@ proyecto_comandos/
 - `imagenes` y `backup_notas.txt`: eliminados según la consigna.
 - `tarea-s1-wilmer_ruilova.txt`: historial real de la sesión de práctica.
 
-<img src="figuras/captura-resumen.png" alt="Figura 2. Captura real de resumen.txt en Bloc de notas" width="800">
-
-Figura 2. Captura real del archivo resumen.txt abierto en Bloc de notas de Windows, con las cuatro líneas obtenidas en Ubuntu WSL. La salida original está en evidencia-terminal.txt. Esta captura muestra el resultado, no una terminal; se recomienda adjuntar además una captura manual de la terminal.
+Las capturas reales de la terminal serán tomadas por el estudiante y añadidas en la carpeta capturas antes de completar la revisión del informe.
 
 ## 10. Bibliografía
 Instituto Sudamericano. (2026). *1. Fundamentación teórica* [Material de curso]. EVA. https://eva.sudamericano.edu.ec/mod/page/view.php?id=30431
@@ -139,5 +128,3 @@ Instituto Sudamericano. (2026). *1. Fundamentación teórica* [Material de curso
 Instituto Sudamericano. (2026). *TAS1 - Estructura linux* [Consigna de práctica]. EVA. https://eva.sudamericano.edu.ec/mod/assign/view.php?id=32765
 
 maguaman2. (s. f.). *informe-tendencias* [Plantilla de informe]. GitHub. https://github.com/maguaman2/informe-tendencias
-
-Instituto Sudamericano. (2026). *Programa de estudios de asignatura: Tendencias tecnológicas* [PEA, marzo-agosto de 2026]. Documento proporcionado por el estudiante; unidad 1, contenido 1.1.

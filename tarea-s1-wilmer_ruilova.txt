@@ -1,26 +1,33 @@
-    1  pwd
-    2  mkdir proyecto_comandos
-    3  cd proyecto_comandos
-    4  mkdir documentos imagenes scripts
-    5  ls -l
-    6  touch documentos/notas.txt
-    7  echo 'Practica de comandos Linux - Semana 1' > documentos/notas.txt
-    8  echo 'Autor: Wilmer Alexander Ruilova Merchan' >> documentos/notas.txt
-    9  echo 'Objetivo: crear y manipular archivos desde la terminal.' >> documentos/notas.txt
-   10  cat documentos/notas.txt
-   11  cp documentos/notas.txt scripts/notas.txt
-   12  mv scripts/notas.txt scripts/backup_notas.txt
-   13  ls -l scripts
-   14  mv scripts/backup_notas.txt imagenes/backup_notas.txt
-   15  ls -l imagenes
-   16  touch documentos/resumen.txt
-   17  cat documentos/notas.txt > documentos/resumen.txt
-   18  echo 'La redireccion con >> agrega contenido sin borrar lo anterior.' >> documentos/resumen.txt
-   19  cat documentos/resumen.txt
-   20  rm imagenes/backup_notas.txt
-   21  rmdir imagenes
-   22  find . -maxdepth 2 -print
-   23  wc -l documentos/notas.txt documentos/resumen.txt
-   24  cmp documentos/notas.txt <(head -n 3 documentos/resumen.txt) && echo 'VERIFICADO: resumen conserva las tres lineas originales.'
-   25  test ! -e imagenes && test -d scripts && echo 'VERIFICADO: imagenes eliminada y scripts conservada.'
-   26  history | tee ../tarea-s1-wilmer_ruilova.txt
+    1  printf '\nTAS1 - COMANDOS LINUX | ETAPA 1: CARPETAS\n\n'
+    2  cd '/mnt/c/Users/USER/OneDrive/Desktop/02 - Estudios/Tendencias_Tecnologicas_T1/practica-verificada'
+    3  mkdir proyecto_comandos
+    4  cd proyecto_comandos
+    5  mkdir documentos imagenes scripts
+    6  pwd
+    7  ls -l
+    8  printf '\nTAS1 | ETAPA 2: CREAR, COPIAR, RENOMBRAR Y MOVER\n\n'
+    9  touch documentos/notas.txt
+   10  echo 'Practica de comandos Linux - Semana 1' > documentos/notas.txt
+   11  echo 'Autor: Wilmer Alexander Ruilova Merchan' >> documentos/notas.txt
+   12  echo 'Objetivo: crear y manipular archivos desde la terminal.' >> documentos/notas.txt
+   13  cat -n documentos/notas.txt
+   14  cp documentos/notas.txt scripts/notas.txt
+   15  mv scripts/notas.txt scripts/backup_notas.txt
+   16  ls scripts
+   17  mv scripts/backup_notas.txt imagenes/backup_notas.txt
+   18  ls imagenes
+   19  printf '\nTAS1 | ETAPA 3: REDIRECCION Y CONTENIDO\n\n'
+   20  touch documentos/resumen.txt
+   21  cat documentos/notas.txt > documentos/resumen.txt
+   22  echo 'La redireccion con >> agrega contenido sin borrar lo anterior.' >> documentos/resumen.txt
+   23  cat -n documentos/resumen.txt
+   24  wc -l documentos/notas.txt documentos/resumen.txt
+   25  cmp documentos/notas.txt <(head -n 3 documentos/resumen.txt) && echo 'OK: resumen conserva las tres lineas de notas.'
+   26  printf '\nTAS1 | ETAPA 4: ELIMINACION Y VERIFICACION FINAL\n\n'
+   27  rm imagenes/backup_notas.txt
+   28  rmdir imagenes
+   29  find . -maxdepth 2 -print
+   30  test ! -e imagenes && test -d scripts && echo 'OK: imagenes eliminada y scripts conservada.'
+   31  wc -l documentos/notas.txt documentos/resumen.txt
+   32  printf '\nTAS1 | ETAPA 5: HISTORY Y TUBERIA\n\n'
+   33  history | tee ../tarea-s1-wilmer_ruilova.txt

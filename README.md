@@ -1,16 +1,15 @@
-# Tendencias_Tecnologicas_T1
+# TAS1 - Comandos de Linux
 
-Práctica de Semana 1: comandos y estructura de archivos Linux.
+Práctica No. 1 de Tendencias Tecnológicas: creación y manipulación de archivos y directorios en Ubuntu WSL.
 
-- [Informe](informe.md)
-- [Historial real de comandos](tarea-s1-wilmer_ruilova.txt)
-- [Salida real de la sesión](evidencia-terminal.txt)
-- [Infografía de comandos](figuras/infografia-comandos.png)
+- [Informe Markdown: diez apartados de la plantilla](informe.md)
+- [Historial real de comandos exportado con una tubería](tarea-s1-wilmer_ruilova.txt)
+- [Salida real de la ejecución](evidencia-terminal.txt)
+- [Notas](proyecto_comandos/documentos/notas.txt)
+- [Resumen](proyecto_comandos/documentos/resumen.txt)
 
-La práctica fue ejecutada con ayuda del asistente en Ubuntu 24.04.4 LTS, WSL 2 y Bash 5.2.21. El estudiante debe revisar y explicar los resultados con sus palabras.
+Verificado: notas con tres líneas; resumen con cuatro, conservando las tres originales; backup eliminado y directorio imagenes eliminado cuando quedó vacío. scripts queda vacío en la práctica local; Git no registra directorios vacíos.
 
-El PEA de referencia incluye comandos y directorios Linux y una infografía; la consigna de EVA determina los entregables de TAS1. El PDF original se conserva localmente y no se publica en el repositorio.
+La práctica se ejecutó nuevamente en una carpeta nueva con Ubuntu 24.04.4 LTS y Bash 5.2.21, mediante el asistente. No hubo errores durante la sesión verificada. El historial contiene los comandos realmente ejecutados en esa sesión.
 
-Pendientes: audio personal MP3 de 60 segundos, capturas de terminal tomadas manualmente y entrega en EVA. Se incluyen capturas reales del archivo de resultados cuando estén disponibles.
-
-Nota: Git no registra directorios vacíos. La carpeta scripts existe vacía en la práctica local aunque no aparezca en el árbol del repositorio.
+Pendiente: el estudiante toma las capturas reales de la terminal y las guarda en capturas. EVA también solicita un audio personal MP3 de 60 segundos; todavía no está adjunto.
