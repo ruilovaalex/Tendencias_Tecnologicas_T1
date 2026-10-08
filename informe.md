@@ -120,7 +120,9 @@ proyecto_comandos/
 - `imagenes` y `backup_notas.txt`: eliminados según la consigna.
 - `tarea-s1-wilmer_ruilova.txt`: historial real de la sesión de práctica.
 
-Las capturas reales de la terminal serán tomadas por el estudiante y añadidas en la carpeta capturas antes de completar la revisión del informe.
+<img src="capturas/resultados-ubuntu.png" alt="Figura 2. Resultados reales de la practica en Ubuntu WSL" width="800">
+
+Figura 2. Captura tomada por el estudiante en Ubuntu WSL: estructura final, notas de tres líneas, resumen de cuatro líneas y comprobación de eliminación del directorio imagenes. El historial completo de creación, copia, cambio de nombre, movimiento y eliminación está en tarea-s1-wilmer_ruilova.txt.
 
 ## 10. Bibliografía
 Instituto Sudamericano. (2026). *1. Fundamentación teórica* [Material de curso]. EVA. https://eva.sudamericano.edu.ec/mod/page/view.php?id=30431

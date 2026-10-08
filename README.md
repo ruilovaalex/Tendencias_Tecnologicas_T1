@@ -12,4 +12,4 @@ Verificado: notas con tres líneas; resumen con cuatro, conservando las tres ori
 
 La práctica se ejecutó nuevamente en una carpeta nueva con Ubuntu 24.04.4 LTS y Bash 5.2.21, mediante el asistente. No hubo errores durante la sesión verificada. El historial contiene los comandos realmente ejecutados en esa sesión.
 
-Pendiente: el estudiante toma las capturas reales de la terminal y las guarda en capturas. EVA también solicita un audio personal MP3 de 60 segundos; todavía no está adjunto.
+Se incluye la captura real de resultados de Ubuntu WSL en capturas/resultados-ubuntu.png, tomada por el estudiante. Pendiente: adjuntar en EVA el audio personal MP3 de 60 segundos.
