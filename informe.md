@@ -3,7 +3,7 @@
 Autor: Wilmer Alexander Ruilova Merchan
 Asignatura: Tendencias Tecnológicas — Semana 1
 Fecha: 8 de octubre de 2026
-Estado: borrador para revisión del estudiante; práctica ejecutada por el asistente en Ubuntu WSL del equipo.
+
 
 ## 1. Titulo
 Creación y manipulación de archivos y directorios desde la terminal de Linux.
