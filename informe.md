@@ -5,27 +5,27 @@ Asignatura: Tendencias Tecnológicas — Semana 1
 Fecha: 8 de octubre de 2026
 
 ## 1. Título
-Organización de carpetas y manejo de archivos con comandos de Linux.
+Crear carpetas y manejar archivos en Linux.
 
 ## 2. Tiempo de duración
-Aproximadamente 14 minutos, considerando la revisión de los comandos, las capturas y la grabación del audio.
+Unos 14 minutos entre revisar los comandos, tomar la captura y grabar el audio.
 
 ## 3. Fundamentos
-La terminal de Linux permite trabajar con archivos y carpetas mediante comandos. En lugar de abrir varias ventanas y hacer clic en cada opción, se escribe una instrucción para realizar una tarea. Bash es la shell que interpreta estos comandos. Para esta práctica se usó Ubuntu con WSL 2, que permite utilizar Linux dentro de Windows sin tener que reiniciar el computador.
+Para esta práctica se usó la terminal de Ubuntu en Windows. Desde ahí se pueden crear carpetas, escribir archivos y moverlos sin abrir el explorador. WSL permite usar Linux dentro de Windows y Bash interpreta los comandos que se escriben en la terminal.
 
-Antes de crear o mover un archivo, conviene saber en qué carpeta estamos. El comando `pwd` muestra la ubicación actual y `ls` permite revisar su contenido. Para cambiar de carpeta se utiliza `cd`. Estos comandos ayudan a evitar confusiones, sobre todo cuando existen varios archivos con nombres parecidos. Las rutas también son importantes: una ruta absoluta indica la ubicación desde la raíz del sistema, mientras que una relativa parte de la carpeta en la que estamos trabajando.
+Lo primero es revisar dónde estamos. Para eso sirve `pwd`, que muestra la carpeta actual. Con `ls` podemos ver lo que hay dentro y con `cd` cambiamos de carpeta. Esto ayuda porque, si usamos una ruta incorrecta, el archivo puede quedar en otro lugar o el comando puede fallar. Una ruta absoluta empieza desde la raíz del sistema. Una ruta relativa parte de la carpeta actual, como documentos/notas.txt en este ejercicio.
 
-Para organizar la práctica se creó una carpeta principal y tres subcarpetas. El comando `mkdir` sirve para crear directorios. Después se utilizó `touch` para crear un archivo vacío. Si el archivo ya existe, este comando actualiza sus marcas de tiempo. Con `echo` se escribió el texto de las notas y con `cat` se revisó su contenido. La opción `-n` de `cat` muestra los números de las líneas y facilita comprobar cuántas hay.
+Para crear las carpetas se usa `mkdir`. En este caso se creó proyecto_comandos y dentro quedaron documentos, imagenes y scripts. Luego, con `touch`, se creó notas.txt vacío. Si un archivo ya existe, touch actualiza sus fechas, no borra su contenido. El texto se agregó con `echo`. Después se revisó con `cat -n`, que muestra el contenido y numera las líneas.
 
-La diferencia entre copiar y mover se puede ver con `cp` y `mv`. Al copiar, el archivo original se conserva y aparece otra copia en el destino. Al mover, el archivo cambia de ubicación. Además, `mv` sirve para cambiar su nombre. Por eso se pudo copiar notas.txt a scripts, renombrar la copia y llevarla a imagenes.
+Los comandos `cp` y `mv` tienen usos distintos. Con cp se hace una copia y el original queda en su carpeta. Con mv se puede mover un archivo o cambiarle el nombre. En la práctica primero se copiaron las notas a scripts. Esa copia se llamó backup_notas.txt y después pasó a imagenes. El archivo original siguió en documentos.
 
-Otro punto de la práctica fue la redirección. El símbolo `>` envía el contenido a un archivo y reemplaza lo que había antes. En cambio, `>>` agrega texto al final. Esta diferencia permitió que resumen.txt conservara las tres líneas de notas y tuviera una cuarta línea adicional.
+También se trabajó con los símbolos `>` y `>>`. Un signo mayor reemplaza el contenido del archivo de destino. Dos signos mayores agregan texto al final, sin borrar lo anterior. Para resumen.txt primero se pasó el contenido de notas.txt y después se agregó otra línea. Así quedaron las tres líneas originales más una nueva.
 
-Para terminar, `rm` eliminó el archivo de respaldo y `rmdir` borró la carpeta cuando quedó vacía. El historial se guardó con `history | tee`: la tubería pasa la salida del primer comando al segundo, y `tee` la muestra en pantalla y la escribe en un archivo. Así queda un registro que permite revisar los pasos realizados.
+Al terminar se borró el respaldo con `rm`. Después se usó `rmdir` para quitar imagenes, que ya estaba vacía. Este comando no elimina una carpeta si todavía tiene archivos. Por último se guardó el historial con `history | tee`. La tubería conecta los dos comandos: history muestra el registro y tee lo guarda en un archivo, además de mostrarlo en pantalla. Ese archivo sirve para revisar cómo se hizo la práctica.
 
 <img src="capturas/resultados-ubuntu.png" alt="Figura 1. Ejemplo real de archivos y redireccion en Ubuntu WSL" width="800">
 
-Figura 1. En la terminal se observan las carpetas, las tres líneas de notas y la cuarta línea añadida al resumen. Este ejemplo muestra la diferencia entre leer un archivo y agregarle contenido.
+Figura 1. Aquí se ven las notas y el resumen. El resumen tiene una línea más porque se agregó con >>.
 
 ## 4. Conocimientos previos
 - Diferencia entre archivo, directorio y ruta.
@@ -53,7 +53,7 @@ Figura 1. En la terminal se observan las carpetas, las tres líneas de notas y l
 - Plantilla del docente: https://github.com/maguaman2/informe-tendencias
 
 ## 8. Procedimiento
-La práctica se realizó en Ubuntu WSL. La carpeta de trabajo fue `/mnt/c/Users/USER/OneDrive/Desktop/02 - Estudios/Tendencias_Tecnologicas_T1/practica-verificada`.
+Se usó Ubuntu WSL. La práctica quedó en esta carpeta: `/mnt/c/Users/USER/OneDrive/Desktop/02 - Estudios/Tendencias_Tecnologicas_T1/practica-verificada`.
 
 ### Paso 1. Crear las carpetas
 ```bash
@@ -94,7 +94,7 @@ cat -n documentos/resumen.txt
 rm imagenes/backup_notas.txt
 rmdir imagenes
 ```
-Se utilizó `imagenes`, sin tilde, porque así se llama la carpeta creada en las instrucciones iniciales.
+La carpeta se llamó `imagenes`, sin tilde, como indica el primer paso de la tarea.
 
 ### Paso 6. Comprobar los resultados y guardar el historial
 ```bash
@@ -104,10 +104,10 @@ cmp documentos/notas.txt <(head -n 3 documentos/resumen.txt) && echo 'OK: resume
 test ! -e imagenes && test -d scripts && echo 'OK: imagenes eliminada y scripts conservada.'
 history | tee ../tarea-s1-wilmer_ruilova.txt
 ```
-El historial quedó guardado fuera de `proyecto_comandos`. Su copia se subió al repositorio junto con este informe.
+El historial quedó un nivel arriba de proyecto_comandos. También está subido en el repositorio.
 
 ## 9. Resultados esperados
-Al finalizar, la estructura de carpetas quedó así:
+Al final quedó esto:
 ```text
 proyecto_comandos/
 ├── documentos/
@@ -123,7 +123,7 @@ proyecto_comandos/
 
 <img src="capturas/resultados-ubuntu.png" alt="Figura 2. Resultados reales de la practica en Ubuntu WSL" width="800">
 
-Figura 2. Captura de los resultados en Ubuntu WSL. Se ve el contenido de los archivos y la comprobación de que imagenes ya no existe. Los pasos de copia, cambio de nombre y movimiento pueden revisarse en tarea-s1-wilmer_ruilova.txt.
+Figura 2. Resultado final en Ubuntu. Las notas tienen 3 líneas y el resumen 4. La carpeta imagenes ya no está. Los demás comandos se pueden revisar en el archivo del historial.
 
 ## 10. Bibliografía
 Instituto Sudamericano. (2026). *1. Fundamentación teórica* [Material de curso]. EVA. https://eva.sudamericano.edu.ec/mod/page/view.php?id=30431
